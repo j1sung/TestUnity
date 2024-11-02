@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class Walk : MonoBehaviour
+public class Walk : MonoBehaviourPun
 {
     Rigidbody2D rigid;
     [SerializeField] float speed;
@@ -16,6 +17,10 @@ public class Walk : MonoBehaviour
 
     void Update()
     {
+        if (!photonView.IsMine) 
+        {
+            return;
+        }
         float h = Input.GetAxisRaw("Horizontal");
         if (h != 0)
         {
