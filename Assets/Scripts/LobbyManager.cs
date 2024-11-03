@@ -11,7 +11,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks // Photon.Pun 제공, 콜백(�
 
     [SerializeField] Text connectionInfoText;  // 네트워크 정보 표시 텍스트
     [SerializeField] Button joinButton; // 룸 접속 버튼
-    // Start is called before the first frame update
+    
     void Start()
     {
         PhotonNetwork.GameVersion = gameVersion;
@@ -24,7 +24,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks // Photon.Pun 제공, 콜백(�
         connectionInfoText.text = "마스터 서버에 접속 중...";
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         
