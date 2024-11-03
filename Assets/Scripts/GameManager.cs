@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviourPunCallbacks, IPunObservable
     {
         if(Input.GetKeyUp(KeyCode.Escape))
         {
-            PhotonNetwork.LeaveLobby();
+            PhotonNetwork.LeaveRoom();
         }
     }
 
